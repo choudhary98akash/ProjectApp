@@ -60,11 +60,20 @@ fun Login(
 
         Spacer(modifier = Modifier.height(30.dp))
 
+        Row (
+            modifier = Modifier.fillMaxWidth(0.7F)
+        ){
+            Text(
+                text = "Email",
+                style = TextStyle(fontSize = 18.sp),
+            )
+
+        }
 
         TextField(
             value = email,
             onValueChange = { email = it },
-            label = { Text("Email") },
+//            label = { Text("Email") },
             modifier = Modifier
                 .fillMaxWidth(0.9f)
                 .background(Color.White) // Set white background
@@ -73,8 +82,8 @@ fun Login(
                 .shadow( // Drop shadow
                     elevation = 4.dp,
                     shape = RoundedCornerShape(20.dp),
-                    ambientColor = Color.LightGray.copy(alpha = 0.2f),
-                    spotColor = Color.LightGray.copy(alpha = 0.4f)
+                    ambientColor = Color(245, 245, 245),
+                    spotColor = Color(245, 245, 245)
                 ),
             colors = TextFieldDefaults.colors( // Remove underline
                 focusedIndicatorColor = Color.Transparent,
@@ -84,11 +93,19 @@ fun Login(
 
         Spacer(modifier = Modifier.height(16.dp))
 
+        Row (
+            modifier = Modifier.fillMaxWidth(0.7F)
+        ){
+            Text(
+                text = "Password",
+                style = TextStyle(fontSize = 18.sp),
+            )
 
+        }
         TextField(
             value = password,
             onValueChange = { password = it },
-            label = { Text("Password") },
+//            label = { Text("Password") },
             modifier = Modifier
                 .fillMaxWidth(0.9f)
                 .background(Color.White) // Set white background
